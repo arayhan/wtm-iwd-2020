@@ -1,0 +1,16 @@
+.tab {
+	border-bottom: 1px solid #eee;
+	overflow-x: auto;
+
+	.tab-link {
+		cursor: pointer;
+		padding: 20px 25px;
+		display: inline-block;
+		min-width: 150px;
+		text-align: center;
+
+		&.active {
+			border-bottom: 2px solid $color-primary;
+		}
+	}
+}

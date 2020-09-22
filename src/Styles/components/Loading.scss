@@ -1,0 +1,17 @@
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: white;
+	width: 100vw;
+	height: 100vh;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 250ms ease;
+
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot should same like snapshot 1`] = `
+<div
+  className="App"
+>
+  <NavbarTop />
+  <div
+    className="center-screen"
+    id="loading-section"
+  >
+    <Fade>
+      <hr />
+      <h1>
+        Loading ...
+      </h1>
+      <hr />
+    </Fade>
+  </div>
+</div>
+`;

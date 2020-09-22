@@ -1,0 +1,37 @@
+.color-font-primary {
+	color: $color-primary;
+}
+.color-font-secondary {
+	color: $color-secondary;
+}
+.color-font-text-title {
+	color: $grey-darken-4;
+}
+.color-font-text-primary {
+	color: $grey-darken-2;
+}
+.color-font-text-secondary {
+	color: $grey-darken-1;
+}
+
+.bg-red {
+	background-color: $red-base;
+}
+
+.bg-section-grey {
+	background-color: $grey-lighten-4;
+}
+.bg-grey-lighten-3 {
+	background-color: $grey-lighten-3;
+}
+.bg-grey-lighten-2 {
+	background-color: $grey-lighten-2;
+}
+.bg-grey-base {
+	background-color: $grey-base;
+}
+
+.border-1-grey {
+	border: 1px solid $grey-lighten-2;
+	border-radius: 5px;
+}

@@ -1,0 +1,81 @@
+a,
+button,
+.react-ripples {
+	cursor: pointer;
+	transition: all 200ms ease;
+	display: inline-block;
+	border: 0;
+	outline: none;
+}
+
+.button {
+	background: $grey-lighten-3;
+	padding: 10px 20px;
+	color: $grey-darken-3;
+	border-radius: $radius-normal;
+
+	&:hover {
+		background: $grey-lighten-2;
+	}
+
+	&.button-primary {
+		background: $color-primary;
+		color: white;
+
+		&:hover {
+			background: darken($color-primary, 5%);
+		}
+	}
+
+	&.button-secondary {
+		background: $color-secondary;
+		color: white;
+
+		i { color: white }
+
+		&:hover {
+			background: darken($color-secondary, 5%);
+		}
+	}
+
+	&:disabled {
+		background: lighten($color-primary, 30%) !important;	
+		cursor: not-allowed;
+	}
+
+	&.button-small {
+		padding: 8px 15px;
+	}
+
+	&.button-icon {
+		padding: 8px 10px;
+	}
+}
+
+.floating-chat-button {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	background: white;
+	justify-content: center;
+	padding: 20px;
+	cursor: pointer;
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 
+							0 1px 1px 0 rgba(0, 0, 0, 0.14),
+							0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
+	transition: all 250ms ease;
+	
+	&:hover {
+		background: #f5f5f5;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

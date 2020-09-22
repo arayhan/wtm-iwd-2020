@@ -1,0 +1,153 @@
+import {db} from "./Firebase";
+
+export const eventSeedData = async () => {
+  await db.ref('events').push(
+    {
+      streamerId: 'sjkdhjsdhq928jahskds19',
+      name: 'IWD 2020 - Day 1',
+      description: 'International Womens Day - Day 1',
+      imageUrl: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+      startDate: '9-5-2020',
+      endDate: '9-5-2020',
+      startTime: '14:00',
+      endTime: '16:00',
+      speakers: [
+        {
+          uid: 'oosrs67162uhjs43s',
+          name: ' WTM Ambassasdor',
+          description: 'Welcoming from WTM Ambassadors',
+          role: 'WTM Ambassador',
+          photoURL: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+        },
+        {
+          uid: 'oosrs67162uhjs43s',
+          name: 'Fransiska P.W. Hadiwidjana',
+          description: 'Know Your Worth and Ask for It',
+          role: 'Founder Prelo Indonesia',
+          photoURL: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+        },
+        {
+          uid: 'oosrs67162uhjs43s',
+          name: 'Florentin Anggraini Purnama',
+          description: 'Google Cloud Platform”',
+          role: 'Data Scientist at OVO',
+          photoURL: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+        }
+      ],
+      prizes: [
+        {
+          name: 'Dicoding Course',
+          photoURL: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+          quantity: '3',
+          description: 'Free 3 Dicoding Course for the most active 3 Participants!'
+        },
+        {
+          name: 'T-Shirt',
+          photoURL: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+          quantity: '10',
+          description: 'Free IWD 2020 T-Shirt for the most active 10 Participants!'
+        }
+      ],
+      listBannersURL: [
+        {
+          url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+          alt: 'WTM IWD Banner'
+        },
+        {
+          url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+          alt: 'Speaker 1'
+        },
+        {
+          url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+          alt: 'Speaker 2'
+        },
+        {
+          url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+          alt: 'Moderator'
+        }
+      ]
+    }
+  ).then((snapshot) => {
+    db.ref('events').child(snapshot.key).update({"id": snapshot.key});
+  });
+};
+
+const a = [
+  {
+    url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+    alt: 'WTM IWD Banner'
+  },
+  {
+    url: 'https://i.ibb.co/jMBGZGc/Fransiska-1.png',
+    alt: 'Speaker 1'
+  },
+  {
+    url: 'https://i.ibb.co/vkZyQGz/Florentin-1-1.png',
+    alt: 'Speaker 2'
+  }
+];
+const b = [
+  {
+    url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+    alt: 'WTM IWD Banner'
+  },
+  {
+    url: 'https://i.ibb.co/6bDV86X/Lady-Noor-Chita-Mawardi-1.png',
+    alt: 'Speaker 1'
+  },
+  {
+    url: 'https://i.ibb.co/GQ2dGhK/Fatia-Kusuma-Dewi-1.png',
+    alt: 'Speaker 2'
+  },
+  {
+    url: 'https://i.ibb.co/Y3FGd3M/Tania-Soerianto-1.png',
+    alt: 'Speaker 3'
+  }
+];
+const c = [
+  {
+    url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+    alt: 'WTM IWD Banner'
+  },
+  {
+    url: 'https://i.ibb.co/hRss6FQ/Nadine-1-1.png',
+    alt: 'Speaker 1'
+  },
+  {
+    url: 'https://i.ibb.co/nf9Q1gZ/Andrew-Darmadi-1.png',
+    alt: 'Speaker 2'
+  },
+  {
+    url: 'https://i.ibb.co/p22DYLs/Aulia-Halimatussadiah-1.png',
+    alt: 'Speaker 3'
+  }
+];
+const d = [
+  {
+    url: 'https://www.womentechmakers.com/static/images/IWD19_Share_FB.png',
+    alt: 'WTM IWD Banner'
+  },
+  {
+    url: 'https://i.ibb.co/s9JR8v6/Deany-Jaghour-1.png',
+    alt: 'Speaker 1'
+  },
+  {
+    url: 'https://i.ibb.co/TLqH8gw/Galuh-Sahid-1.png',
+    alt: 'Speaker 2'
+  },
+  {
+    url: 'https://i.ibb.co/Pz6bv9C/Vina-Zerlina-1.png',
+    alt: 'Speaker 3'
+  }
+];
+
+const exec = async () => {
+  await
+  db.ref('events').child('-M5A5pk1U8bUNqpi-sKP').child('listBannersURL').set(a);
+  await
+  db.ref('events').child('-M5M_gsmfAhB7V-m_q3N').child('listBannersURL').set(b);
+  await
+  db.ref('events').child('-M5M_kQSQnDvVoymrHGd').child('listBannersURL').set(c);
+  await
+  db.ref('events').child('-M5M_nLMK9kMnxAqhcUL').child('listBannersURL').set(d);
+};

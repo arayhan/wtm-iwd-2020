@@ -1,0 +1,15 @@
+{
+  "short_name": "IWD 2020",
+  "name": "International Women's Day 2020",
+  "icons": [
+    {
+      "src": "wtm-logo.png",
+      "sizes": "23x23",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://internationalwomensday-2020.web.app/",
+  "display": "standalone",
+  "theme_color": "#26a69a",
+  "background_color": "#ffffff"
+}

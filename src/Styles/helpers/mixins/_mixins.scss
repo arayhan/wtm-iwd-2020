@@ -1,0 +1,17 @@
+@mixin media-screen($media-size: 0) {
+	@if $media-size == "desktop-big" {
+		$media-size: $breakpoint-desktop-big;
+	} @else if $media-size == "desktop" {
+		$media-size: $breakpoint-desktop;
+	} @else if $media-size == "tablet-big" {
+		$media-size: $breakpoint-tablet-big;
+	} @else if $media-size == "tablet" {
+		$media-size: $breakpoint-tablet;
+	} @else if $media-size == "phone" {
+		$media-size: $breakpoint-phone;
+	}
+
+	@media screen and (max-width: $media-size) {
+		@content;
+	}
+}
